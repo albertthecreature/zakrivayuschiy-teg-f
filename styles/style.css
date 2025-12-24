@@ -326,8 +326,7 @@
 }
 
 .image-filter__multiple {
-  filter: hue-rotate(0.53turn);
-  mix-blend-mode: difference;
+  filter: hue-rotate(0.53turn) saturate(350%);
 }
 
 .image-filter__grayscale {
