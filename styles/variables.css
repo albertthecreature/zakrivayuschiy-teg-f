@@ -1,1 +1,47 @@
-/* В этом файле будут храниться все значения переменных в исходном состоянии, а так же их изменения в зависимости от ширины устройства */
+/* В этом файле будут храниться все значения переменных 
+в исходном состоянии, а так же их изменения в зависимости 
+от ширины устройства */
+:root {
+  --basic-font-family: "Inter Variable";
+  --accent-font-family: "PressStart2P Regular";
+  --basic-font-weight__bold: "wght" 715;
+  --basic-font-weight__normal: "wght" 410;
+  --main-text-size: 18px;
+  --background-color: #fff;
+  --accent-color: #000;
+  --main-text-color: #000;
+  --text-accent-color: #fff;
+  --border-color: #000;
+  --background-gradient: repeating-linear-gradient(
+      to right,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    repeating-linear-gradient(
+      to bottom,
+      #d3d3d3,
+      #d3d3d3 2px,
+      transparent 2px,
+      transparent 4px
+    ),
+    linear-gradient(to bottom, #e7e7e7, #1a1a1a);
+  --inline-size: clamp(30vw, 700px, 90vw);
+  --stroke-color: #fff;
+  --floppy-inline-size: 21px;
+  --heart-contour-color: #000;
+  --heart-sparks-color: #f00;
+  --heart-fill-color: #f00;
+}
+
+@media (width <= 375px) {
+  :root {
+    --inline-size: 100%;
+    --floppy-inline-size: 28px;
+  }
+
+  .save-button {
+    flex-direction: column;
+  }
+}
