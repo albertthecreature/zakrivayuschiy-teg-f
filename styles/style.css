@@ -29,11 +29,13 @@
   min-block-size: 368px;
   background-color: var(--background-color);
   inline-size: var(--inline-size);
-  font-family: var(--accent-font-family);
-  justify-items: center;
+  font-family: var(--accent-font-family), sans-serif;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   text-transform: uppercase;
   border: 2px solid var(--border-color);
-  align-content: center;
 }
 
 .header__logo {
@@ -83,12 +85,14 @@
 .card__image {
   display: block;
   inline-size: 100%;
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
 
 .card__image-watermark {
   font-size: 14px;
   text-transform: uppercase;
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   position: absolute;
   top: 28px;
   right: 26px;
@@ -99,7 +103,7 @@
 }
 
 @supports ((text-stroke: 1px #fff) or (-webkit-text-stroke: 1px #fff)) {
-  .card__image-watermark::after {
+  .card__image-watermark {
     -webkit-text-stroke: 1px var(--stroke-color);
     text-stroke: 1px var(--stroke-color);
     text-shadow: none;
@@ -127,7 +131,7 @@
 
 .button {
   position: relative;
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   background-color: var(--background-color);
   border: 2px solid var(--border-color);
   cursor: pointer;
@@ -163,13 +167,12 @@
 
 .card__like-button {
   inline-size: 130px;
-  block-size: 38px;
+  block-size: 40px;
 }
 
 .save-button {
   display: flex;
   gap: 7px;
-  font-family: var(--accent-font-family);
   font-size: 14px;
   padding: 20px;
   align-items: center;
@@ -187,6 +190,9 @@
 /* CARD ICON BUTTON */
 
 .card__icon-button {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 0;
   background-color: var(--background-color);
   cursor: pointer;
@@ -223,17 +229,17 @@
 }
 
 .like-icon.is-liked .core {
-  transition: fill 0.3 linear;
+  transition: fill 0.3s linear;
   fill: var(--heart-fill-color);
 }
 
 .like-icon.is-liked .main-body {
-  transition: fill 0.3 linear 0.05s;
+  transition: fill 0.3s linear 0.05s;
   fill: var(--heart-fill-color);
 }
 
 .like-icon.is-liked .contour {
-  transition: fill 0.3 linear 0.06s;
+  transition: fill 0.3s linear 0.06s;
   fill: var(--heart-fill-color);
 }
 
@@ -266,7 +272,7 @@
 
 .dialog {
   max-inline-size: 353px;
-  font-family: var(--accent-font-family);
+  font-family: var(--accent-font-family), sans-serif;
   font-size: 14px;
   line-height: 1.5em;
   padding: 30px;
@@ -296,6 +302,7 @@
 }
 
 .dialog__close-button {
+  text-transform: uppercase;
   padding-block: 12px;
 }
 

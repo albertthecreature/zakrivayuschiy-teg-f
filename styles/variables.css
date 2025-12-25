@@ -3,7 +3,7 @@
 от ширины устройства */
 :root {
   --basic-font-family: "Inter Variable";
-  --accent-font-family: "PressStart2P Regular";
+  --accent-font-family: "PressStart2P";
   --basic-font-weight__bold: "wght" 715;
   --basic-font-weight__normal: "wght" 410;
   --main-text-size: 18px;
