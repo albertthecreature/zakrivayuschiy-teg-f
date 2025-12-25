@@ -33,10 +33,12 @@
   --heart-contour-color: #000;
   --heart-sparks-color: #f00;
   --heart-fill-color: #f00;
+  --header-block-size: 368px;
 }
 
 @media (width <= 375px) {
   :root {
+    --header-block-size: 328px;
     --inline-size: 100%;
     --floppy-inline-size: 28px;
   }
